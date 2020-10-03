@@ -1,0 +1,3 @@
+token: mybot:apitoken
+db_data_source_name: user=postgresqluser dbname=postgresqldbname password='mysecretpassword' sslmode=disable
+url: http://example.com

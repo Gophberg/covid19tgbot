@@ -43,15 +43,16 @@ func RunBot(config *Config) {
 		log.Printf("[%s] %s", update.Message.From.UserName, update.Message.Text)
 		tgid := update.Message.From.ID
 
-		if update.Message.Text == "test" {
-			log.Println("Received test command. Processing update.")
-			isUpdate <- true
-			log.Println("isUpdate channel setted in true.")
-		}
+		// This block for testing only
+		// if update.Message.Text == "test" {
+		// log.Println("Received test command. Processing update.")
+		// isUpdate <- true
+		// log.Println("isUpdate channel setted in true.")
+		// }
 
 		//check user for exist
 		if IsExist(tgid) {
-			log.Println("Reseived some message. Sending last \"Cases\".")
+			log.Println("Received some message. Sending last \"Cases\".")
 			nums, err := GetLast()
 			if err != nil {
 				log.Panic(err)

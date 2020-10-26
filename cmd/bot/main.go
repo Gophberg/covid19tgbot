@@ -1,7 +1,7 @@
 package main
 
 import (
-	"covid19rus/internal/bot"
+	"covid19tgbot/internal/app/bot"
 )
 
 func main() {

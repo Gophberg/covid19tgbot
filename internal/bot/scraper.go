@@ -53,7 +53,7 @@ func ScrapeNums(config *Config) (int, error) {
 func extr(s string) int {
 	start := strings.Index(s, ":")
 	end := strings.Index(s, "(")
-	t := strings.TrimSpace(s[start+1 : end-1])
+	t := strings.Replace(s[start+1:end-1], " ", "", -1)
 	sInt, err := strconv.Atoi(t)
 	if err != nil {
 		log.Panic(err)
